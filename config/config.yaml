@@ -1,0 +1,27 @@
+# Configuração Cliente NFSe Campinas
+cliente:
+  nome: "Cliente Exemplo LTDA"
+  cnpj: "12345678000199"
+  inscricao_municipal: "123456"
+
+gcp:
+  project_id: "cliente-exemplo-project"
+  dataset_id: "fiscal_data"
+  location: "us-east1"
+  bucket_raw_data: "cliente-exemplo-nfse-raw"
+
+nfse:
+  ambiente: "homologacao"
+  wsdl_url_homologacao: "https://homol-rps.ima.sp.gov.br/notafiscal-abrasfv203-ws/NotaFiscalSoap?wsdl"
+  wsdl_url_producao: "https://issdigital.campinas.sp.gov.br/notafiscal-abrasfv203-ws/NotaFiscalSoap?wsdl"
+  certificado_path: "config/certificados/certificado.pfx"
+  certificado_senha: "${CERT_PASSWORD}"
+
+processamento:
+  consulta_periodo_dias: 7
+  retry_tentativas: 3
+  lote_tamanho: 100
+
+logging:
+  level: "INFO"
+  formato: "json"

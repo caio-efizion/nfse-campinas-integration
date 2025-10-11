@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv
+
+# GCP Credentials
+*.json
+!schemas/**/*.json
+
+# Certificados
+*.pfx
+*.pem
+*.p12
+config/certificados/*
+
+# Logs
+logs/*.log
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/.terraform.lock.hcl
