@@ -1,0 +1,516 @@
+[
+  {
+    "name": "id",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "UUID único do registro"
+  },
+  {
+    "name": "numero_nfse",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Número da NFS-e (15 dígitos)"
+  },
+  {
+    "name": "codigo_verificacao",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Código de verificação da NFS-e (9 caracteres)"
+  },
+  {
+    "name": "data_emissao",
+    "type": "TIMESTAMP",
+    "mode": "REQUIRED",
+    "description": "Data e hora de emissão da NFS-e"
+  },
+  {
+    "name": "data_competencia",
+    "type": "DATE",
+    "mode": "NULLABLE",
+    "description": "Data de competência do serviço"
+  },
+  {
+    "name": "status_nfse",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Status da NFS-e (Normal, Cancelado)"
+  },
+  {
+    "name": "nfse_substituida",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Número da NFS-e substituída (se houver)"
+  },
+  {
+    "name": "prestador_cnpj",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "CNPJ do prestador (14 dígitos)"
+  },
+  {
+    "name": "prestador_inscricao_municipal",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inscrição municipal do prestador"
+  },
+  {
+    "name": "prestador_razao_social",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Razão social do prestador"
+  },
+  {
+    "name": "prestador_nome_fantasia",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Nome fantasia do prestador"
+  },
+  {
+    "name": "prestador_endereco",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Logradouro do prestador"
+  },
+  {
+    "name": "prestador_numero",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Número do endereço"
+  },
+  {
+    "name": "prestador_complemento",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Complemento do endereço"
+  },
+  {
+    "name": "prestador_bairro",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Bairro do prestador"
+  },
+  {
+    "name": "prestador_codigo_municipio",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código IBGE do município (7 dígitos)"
+  },
+  {
+    "name": "prestador_uf",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "UF do prestador (2 caracteres)"
+  },
+  {
+    "name": "prestador_cep",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "CEP do prestador (8 dígitos)"
+  },
+  {
+    "name": "prestador_telefone",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Telefone do prestador"
+  },
+  {
+    "name": "prestador_email",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Email do prestador"
+  },
+  {
+    "name": "tomador_cpf_cnpj",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "CPF (11) ou CNPJ (14) do tomador"
+  },
+  {
+    "name": "tomador_inscricao_municipal",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Inscrição municipal do tomador"
+  },
+  {
+    "name": "tomador_razao_social",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Razão social do tomador"
+  },
+  {
+    "name": "tomador_endereco",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Logradouro do tomador"
+  },
+  {
+    "name": "tomador_numero",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Número do endereço"
+  },
+  {
+    "name": "tomador_complemento",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Complemento do endereço"
+  },
+  {
+    "name": "tomador_bairro",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Bairro do tomador"
+  },
+  {
+    "name": "tomador_codigo_municipio",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código IBGE do município"
+  },
+  {
+    "name": "tomador_uf",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "UF do tomador"
+  },
+  {
+    "name": "tomador_cep",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "CEP do tomador"
+  },
+  {
+    "name": "tomador_telefone",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Telefone do tomador"
+  },
+  {
+    "name": "tomador_email",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Email do tomador"
+  },
+  {
+    "name": "intermediario_cpf_cnpj",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "CPF/CNPJ do intermediário (se houver)"
+  },
+  {
+    "name": "intermediario_razao_social",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Razão social do intermediário"
+  },
+  {
+    "name": "valor_servicos",
+    "type": "NUMERIC",
+    "mode": "REQUIRED",
+    "description": "Valor total dos serviços",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "valor_deducoes",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Valor das deduções",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "valor_pis",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Valor do PIS",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "valor_cofins",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Valor do COFINS",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "valor_inss",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Valor do INSS",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "valor_ir",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Valor do IR",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "valor_csll",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Valor do CSLL",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "outras_retencoes",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Outras retenções",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "valor_total_tributos",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Valor total dos tributos",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "base_calculo",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Base de cálculo do ISS",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "aliquota",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Alíquota do ISS (%)",
+    "precision": "5",
+    "scale": "2"
+  },
+  {
+    "name": "valor_iss",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Valor do ISS",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "valor_iss_retido",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Valor do ISS retido",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "valor_liquido_nfse",
+    "type": "NUMERIC",
+    "mode": "REQUIRED",
+    "description": "Valor líquido da NFS-e",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "valor_credito",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Valor do crédito",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "desconto_incondicionado",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Desconto incondicionado",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "desconto_condicionado",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Desconto condicionado",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "iss_retido",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE",
+    "description": "Indicador se ISS foi retido (true/false)"
+  },
+  {
+    "name": "responsavel_retencao",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Responsável pela retenção (1-Tomador, 2-Intermediário)"
+  },
+  {
+    "name": "item_lista_servico",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código do item da lista de serviços (LC 116/2003)"
+  },
+  {
+    "name": "codigo_cnae",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código CNAE"
+  },
+  {
+    "name": "codigo_tributacao_municipio",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código de tributação do município"
+  },
+  {
+    "name": "codigo_nbs",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código NBS (Nomenclatura Brasileira de Serviços)"
+  },
+  {
+    "name": "discriminacao",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Discriminação dos serviços prestados"
+  },
+  {
+    "name": "codigo_municipio_prestacao",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código do município de prestação do serviço"
+  },
+  {
+    "name": "codigo_pais",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código do país (tabela BACEN)"
+  },
+  {
+    "name": "exigibilidade_iss",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Exigibilidade do ISS (1-Exigível, 2-Não incidência, etc)"
+  },
+  {
+    "name": "municipio_incidencia",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código do município de incidência do ISS"
+  },
+  {
+    "name": "numero_processo",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Número do processo judicial/administrativo"
+  },
+  {
+    "name": "rps_numero",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Número do RPS que originou a NFS-e"
+  },
+  {
+    "name": "rps_serie",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Série do RPS"
+  },
+  {
+    "name": "rps_tipo",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Tipo do RPS (1-RPS, 2-Nota Fiscal Conjugada, 3-Cupom)"
+  },
+  {
+    "name": "rps_data_emissao",
+    "type": "DATE",
+    "mode": "NULLABLE",
+    "description": "Data de emissão do RPS"
+  },
+  {
+    "name": "codigo_obra",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código da obra (construção civil)"
+  },
+  {
+    "name": "art",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Número da ART (Anotação de Responsabilidade Técnica)"
+  },
+  {
+    "name": "regime_especial_tributacao",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Regime especial de tributação (1-MEI, 2-Estimativa, etc)"
+  },
+  {
+    "name": "optante_simples_nacional",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE",
+    "description": "Indicador se é optante do Simples Nacional"
+  },
+  {
+    "name": "incentivo_fiscal",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE",
+    "description": "Indicador de incentivo fiscal"
+  },
+  {
+    "name": "outras_informacoes",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Outras informações da NFS-e"
+  },
+  {
+    "name": "orgao_gerador_municipio",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código do município do órgão gerador"
+  },
+  {
+    "name": "orgao_gerador_uf",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "UF do órgão gerador"
+  },
+  {
+    "name": "xml_original",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "XML original completo da NFS-e (backup)"
+  },
+  {
+    "name": "url_nfse",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "URL para visualização da NFS-e"
+  },
+  {
+    "name": "data_processamento",
+    "type": "TIMESTAMP",
+    "mode": "REQUIRED",
+    "description": "Data e hora do processamento pelo sistema"
+  },
+  {
+    "name": "data_criacao",
+    "type": "TIMESTAMP",
+    "mode": "REQUIRED",
+    "description": "Data e hora de criação do registro"
+  },
+  {
+    "name": "data_atualizacao",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE",
+    "description": "Data e hora da última atualização"
+  }
+]

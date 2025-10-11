@@ -1,0 +1,106 @@
+[
+  {
+    "name": "id",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "UUID único do registro"
+  },
+  {
+    "name": "rps_numero",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Número do RPS"
+  },
+  {
+    "name": "rps_serie",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Série do RPS"
+  },
+  {
+    "name": "rps_tipo",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Tipo do RPS (1-RPS, 2-Nota Conjugada, 3-Cupom)"
+  },
+  {
+    "name": "data_envio",
+    "type": "TIMESTAMP",
+    "mode": "REQUIRED",
+    "description": "Data e hora do envio do RPS"
+  },
+  {
+    "name": "protocolo",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Número do protocolo de recebimento"
+  },
+  {
+    "name": "status",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Status do processamento (ENVIADO, PROCESSANDO, SUCESSO, ERRO, CANCELADO)"
+  },
+  {
+    "name": "numero_nfse_gerado",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Número da NFS-e gerada a partir deste RPS"
+  },
+  {
+    "name": "codigo_erro",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Código do erro (se houver)"
+  },
+  {
+    "name": "mensagem_erro",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Mensagem de erro detalhada"
+  },
+  {
+    "name": "xml_enviado",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "XML do RPS enviado"
+  },
+  {
+    "name": "xml_resposta",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "XML da resposta recebida"
+  },
+  {
+    "name": "tentativa",
+    "type": "INTEGER",
+    "mode": "REQUIRED",
+    "description": "Número da tentativa de envio (para retry)"
+  },
+  {
+    "name": "tempo_processamento_segundos",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Tempo de processamento em segundos",
+    "precision": "10",
+    "scale": "2"
+  },
+  {
+    "name": "data_processamento",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE",
+    "description": "Data e hora do processamento pela prefeitura"
+  },
+  {
+    "name": "data_criacao",
+    "type": "TIMESTAMP",
+    "mode": "REQUIRED",
+    "description": "Data e hora de criação do registro"
+  },
+  {
+    "name": "data_atualizacao",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE",
+    "description": "Data e hora da última atualização"
+  }
+]

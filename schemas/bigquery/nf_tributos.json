@@ -1,0 +1,68 @@
+[
+  {
+    "name": "id",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "UUID único do registro"
+  },
+  {
+    "name": "numero_nfse",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Número da NFS-e (chave estrangeira)"
+  },
+  {
+    "name": "tipo_tributo",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "Tipo do tributo (PIS, COFINS, INSS, IR, CSLL, ISS, OUTROS)"
+  },
+  {
+    "name": "valor",
+    "type": "NUMERIC",
+    "mode": "REQUIRED",
+    "description": "Valor do tributo",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "base_calculo",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Base de cálculo do tributo",
+    "precision": "15",
+    "scale": "2"
+  },
+  {
+    "name": "aliquota",
+    "type": "NUMERIC",
+    "mode": "NULLABLE",
+    "description": "Alíquota aplicada (%)",
+    "precision": "5",
+    "scale": "2"
+  },
+  {
+    "name": "retido",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE",
+    "description": "Indicador se o tributo foi retido"
+  },
+  {
+    "name": "responsavel_retencao",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Responsável pela retenção (Tomador, Intermediário)"
+  },
+  {
+    "name": "observacoes",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Observações sobre o tributo"
+  },
+  {
+    "name": "data_criacao",
+    "type": "TIMESTAMP",
+    "mode": "REQUIRED",
+    "description": "Data e hora de criação do registro"
+  }
+]
