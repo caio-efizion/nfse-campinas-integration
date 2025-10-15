@@ -1,14 +1,14 @@
 # Configuração Cliente NFSe Campinas
 cliente:
-  nome: "Cliente Exemplo LTDA"
-  cnpj: "12345678000199"
-  inscricao_municipal: "123456"
+  nome: "Gonçalves e Silva Planejamento Empresarial Ltda"
+  cnpj: "10425636000139"
+  inscricao_municipal: "001557548"
 
 gcp:
-  project_id: "cliente-exemplo-project"
+  project_id: "dados-ems-project"
   dataset_id: "fiscal_data"
   location: "us-east1"
-  bucket_raw_data: "cliente-exemplo-nfse-raw"
+  bucket_raw_data: "dados-ems-project-raw"
 
 nfse:
   ambiente: "homologacao"
